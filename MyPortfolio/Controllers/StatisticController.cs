@@ -12,7 +12,12 @@ namespace MyPortfolio.Controllers
 			ViewBag.messagesCount = context.Messages.Count();
 			ViewBag.messagesUnread = context.Messages.Where(m => m.IsRead == false).Count();
 			ViewBag.messagesRead = context.Messages.Where(m => m.IsRead == true).Count();
-			return View();
+			ViewBag.experienceCount = context.Experiences.Count();
+			ViewBag.portfolioCount = context.Portfolios.Count();
+			ViewBag.toDoListDo = context.ToDoLists.Where(t => t.Status == true).Count();
+            ViewBag.toDoListNotDo = context.ToDoLists.Where(t => t.Status == false).Count();
+
+            return View();
 		}
 	}
 }
