@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.DataAccess.Context;
+using MyPortfolio.DataAccess.Entities;
 
 namespace MyPortfolio.Controllers
 {
@@ -41,5 +42,7 @@ namespace MyPortfolio.Controllers
 			var result = context.Messages.Find(id);
 			return View(result);
 		}
+
+		
 	}
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyPortfolio.DataAccess.Context;
+using MyPortfolio.DataAccess.Entities;
 using MyPortfolio.Models;
 using System.Diagnostics;
 
@@ -28,5 +30,7 @@ namespace MyPortfolio.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+
+		
+	}
 }
